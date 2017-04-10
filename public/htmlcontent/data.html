@@ -1,0 +1,35 @@
+<div class="container">
+		<h1>Template Data</h1>
+		<hr>
+		<div class="panel panel-primary" style="width:75%">
+			<div class="panel-heading">
+				<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+				<input type="text" name="template" class="form-control" placeholder="Search parameter" ng-model="search">
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-striped">
+					<thead>
+						<h5><b style="color:#3498DB">Template:</b> <%parametersList[0].template%></h5>
+						<tr>
+							<th>Parameter</th>
+							<th ng-show="modeEdit == 'true'" class="ng-hide">Value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="parameters in parametersList | filter:search">
+							<td><%clearParameter(parameters.parameter)%></td>
+							<td ng-show="modeEdit == 'true'" class="ng-hide"><input type="text" class="form-control col-s2" id="parameterValue" ng-model="value" ng-change="assignValuesToParameter(this.value, parameters.idparam)"></td>
+						</tr>
+					</tbody>			
+				</table>
+				<div class="row" style="float:right;padding-left:3%;padding-right:3%;">
+					<button><i class="glyphicon glyphicon-save" ng-click="toPDF();"></i></button>
+					<button ng-click="addValue();"><i class="glyphicon glyphicon-pencil"></i></button>
+				</div>
+			</div>		
+		</div>
+		<hr>	
+		<button type="button" class="btn btn-primary" ui-sref="main">Main menu</button>
+	</div>

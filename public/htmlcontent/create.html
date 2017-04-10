@@ -1,0 +1,36 @@
+<div class="container">
+		<h1>Create Template</h1>
+		<hr>
+		<form>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+
+				</div>
+				<div class="panel-body">
+					<textarea class="ckeditor" rows="10" id="htmleditor" name="htmleditor" cols="80" ng-model="data.templateContent"></textarea>
+					<script type="text/javascript">
+						CKEDITOR.replace("htmleditor");
+					</script>
+				</div>		
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-sm-3">
+					<input type="text" class="form-control col-s3" name="templateName" id="templateName" ng-model="data.templateName">
+				</div>
+				<div class="col-sm-7">
+					<button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+					<button type="button" class="btn btn-primary" ui-sref="main">Main menu</button>
+				</div>
+			</div>	
+			<label hidden><%response%></label>
+			<div ng-show="response == 'success'" class="ng-hide">
+				<label style="color:#3498DB">Successfully entered</label>
+			</div>
+			<div ng-show="response == 'error'" class="ng-hide">
+				<label style="color:#FFC300">Data entry error</label>
+			</div>
+
+		</form>
+		
+	</div>

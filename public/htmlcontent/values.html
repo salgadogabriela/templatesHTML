@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Assign values to parameters</h1>
+    <hr>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" name="template" class="form-control" placeholder="Search template" ng-model="se">
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>
+                            <a href="" ng-click="ordered('name')">
+                                Name
+                            </a>
+                            <span class="caret" style="cursor: pointer;" ng-click="ordered('-name')"></span>
+                        </th>                     
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="template in templates | orderBy:orderSelected | filter:search">
+                        <td ng-model="idshow"><%template.ID%></td>
+                        <td><%template.TemplateName%></td>
+                        <td><button type="button" class="btn btn-primary btn-xs" ui-sref="show({id:template.ID})">Show</button></td>                        
+                    </tr>
+                </tbody>            
+            </table>
+        </div>      
+    </div>
+    <hr>    
+    <button type="button" class="btn btn-primary" ui-sref="create">Create</button>       
+</div>

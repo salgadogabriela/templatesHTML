@@ -1,0 +1,16 @@
+<div class="container">
+		<h1>Template Preview</h1>
+		<hr>
+		<div class="panel panel-primary">
+			<div class="panel-heading">			
+				<%templateNameToShow%>
+			</div>
+			<div class="panel-body">
+				<textarea rows="10" name="preview" cols="110" style="overflow:auto"><%templateContentToShow%></textarea>
+			</div>		
+		</div>
+		<hr>	
+		<button type="button" class="btn btn-primary" ui-sref="edit">Edit</button>
+		<button type="button" class="btn btn-primary" ui-sref="data({id:templateIdToData})">View data</button>
+		<button type="button" class="btn btn-primary" ui-sref="main">Main menu</button>
+</div>
