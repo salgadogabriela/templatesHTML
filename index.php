@@ -14,7 +14,7 @@
 				Templates HTML
 			</div>
 			<div class="panel-body">
-				<a ng-href="#/">Go to main menu</a>
+				<a ng-href="/">Go to main menu</a>
 				
 			</div>		
 	</div>
