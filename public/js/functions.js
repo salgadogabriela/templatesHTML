@@ -210,13 +210,13 @@ var configFunction = function($routeProvider, $stateProvider, $urlRouterProvider
 	$stateProvider
 	.state('main', {
 		url: '/',
-		templateUrl: 'htmlcontent/main.html',
+		templateUrl: 'public/htmlcontent/main.html',
 		controller: 'MainController'
 	})
 
 	.state('create', {
 		url: '/create',
-		templateUrl: 'htmlcontent/create.html',
+		templateUrl: 'public/htmlcontent/create.html',
 		controller: 'CreateController'
 	})
 
